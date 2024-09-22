@@ -1,0 +1,39 @@
+.error {
+	color: #FF0000;
+	border: #3B78B1 solid 1px;
+	background: white;
+	width: 300px;
+	margin: auto;
+	display: none;
+}
+
+.titulo {
+	padding: 4px 0;
+	width: 900px;
+	margin: auto;
+	background-color: #3B78B1;
+	font-size: 16px;
+	color: white;
+	border-left: #000000 solid 10px;
+	border-right: #000000 solid 10px;
+}
+
+.ani {
+	width: 1020px;
+	height: 100px;
+	margin: auto
+}
+
+body {
+	text-align: center;
+	font-family: Calibri;
+	font-size: 14px;
+}
+
+.tabla {
+	margin: auto;
+}
+
+form {
+	margin: auto;
+}
