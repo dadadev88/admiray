@@ -1,0 +1,36 @@
+version: '3.8'
+name: admiray
+services:
+  app:
+    container_name: admiray-app
+    image: php:5.3-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - local-network
+    depends_on:
+      - db
+
+  db:
+    container_name: admiray-db
+    image: mysql:5.5.41
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=admiray
+      - MYSQL_USER=admiray
+      - MYSQL_PASSWORD=admin123
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - local-network
+
+networks:
+  local-network:
+    driver: bridge
+
+volumes:
+  dbdata:
